@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from 'axios';
+import axios, { AxiosInstance, AxiosResponse } from 'axios';
 
 export class TelegramClient {
   private readonly client: AxiosInstance;
@@ -14,14 +14,12 @@ export class TelegramClient {
     });
   }
 
-  private apiCall = async (methodName: string, requestBody: any): Promise<any> => {
-    return (await this.client.post<any>(`/bot${this.authToken}/${methodName}`, requestBody)).data;
-  }
-
   public sendMessage = async (text: string): Promise<any> => {
-    return await this.apiCall('sendMessage', {
+    return (await this.client.post<AxiosResponse>(`/bot${this.authToken}/sendMessage`, {
       chat_id: this.chatId,
-      text: text
-    });
+      text: text,
+      parse_mode: 'HTML',
+      disable_web_page_preview: true
+    })).data;
   }
 }
