@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2019",
-    "module": "commonjs",
-    "lib": ["ES2019", "DOM"],
+    "module": "CommonJS",
+    "lib": ["ES2019"],
     "declaration": true,
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
     "outDir": "dist",
