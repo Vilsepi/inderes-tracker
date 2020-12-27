@@ -1,2 +1,4 @@
+.serverless
 node_modules
 dist
+secrets.yml

@@ -4,9 +4,9 @@ import { Analysis, Analyses } from './inderesTypes';
 export class InderesClient {
   private readonly client: AxiosInstance;
 
-  public constructor (baseURL: string) {
+  public constructor () {
     this.client = axios.create({
-      baseURL,
+      baseURL: 'https://www.inderes.fi/fi',
       timeout: 10000
     });
   }
