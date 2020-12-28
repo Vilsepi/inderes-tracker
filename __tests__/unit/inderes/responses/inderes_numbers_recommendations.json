@@ -1,0 +1,1073 @@
+{
+  "34": {
+    "isin": "FI0009010912",
+    "name": "Revenio Group",
+    "date_of_recommendation": "21.12.2020",
+    "target_price": "44",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "41": {
+    "isin": "FI4000008719",
+    "name": "Tikkurila",
+    "date_of_recommendation": "18.12.2020",
+    "target_price": "25",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "42": {
+    "isin": "FI0009014351",
+    "name": "Oriola",
+    "date_of_recommendation": "26.10.2020",
+    "target_price": "2",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "46": {
+    "isin": "FI0009014377",
+    "name": "Orion",
+    "date_of_recommendation": "22.10.2020",
+    "target_price": "42",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "52": {
+    "isin": "FI0009005961",
+    "name": "Stora Enso",
+    "date_of_recommendation": "12.11.2020",
+    "target_price": "13",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "53": {
+    "isin": "FI0009013296",
+    "name": "Neste",
+    "date_of_recommendation": "25.10.2020",
+    "target_price": "50",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "54": {
+    "isin": "FI0009005987",
+    "name": "UPM",
+    "date_of_recommendation": "28.10.2020",
+    "target_price": "27.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "55": {
+    "isin": "FI0009004824",
+    "name": "Kemira",
+    "date_of_recommendation": "19.11.2020",
+    "target_price": "13",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "56": {
+    "isin": "FI4000074984",
+    "name": "Valmet",
+    "date_of_recommendation": "28.10.2020",
+    "target_price": "23",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "58": {
+    "isin": "FI0009002422",
+    "name": "Outokumpu",
+    "date_of_recommendation": "16.12.2020",
+    "target_price": "3.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "79": {
+    "isin": "FI0009800643",
+    "name": "YIT",
+    "date_of_recommendation": "2.11.2020",
+    "target_price": "5.3",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "4"
+  },
+  "85": {
+    "isin": "FI0009010862",
+    "name": "Suominen",
+    "date_of_recommendation": "28.10.2020",
+    "target_price": "5.4",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "94": {
+    "isin": "FI0009007132",
+    "name": "Fortum",
+    "date_of_recommendation": "4.12.2020",
+    "target_price": "20",
+    "currency": "EUR",
+    "recommendation": "5",
+    "risk_level": "2"
+  },
+  "178": {
+    "isin": "FI0009008072",
+    "name": "Aspo",
+    "date_of_recommendation": "10.12.2020",
+    "target_price": "8.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "198": {
+    "isin": "FI0009008403",
+    "name": "Basware",
+    "date_of_recommendation": "18.12.2020",
+    "target_price": "40",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "217": {
+    "isin": "FI0009013429",
+    "name": "Cargotec",
+    "date_of_recommendation": "23.10.2020",
+    "target_price": "33",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "228": {
+    "isin": "FI0009007884",
+    "name": "Elisa",
+    "date_of_recommendation": "19.10.2020",
+    "target_price": "45",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "1"
+  },
+  "262": {
+    "isin": "SE0000667925",
+    "name": "Telia company",
+    "date_of_recommendation": "22.10.2020",
+    "target_price": "38",
+    "currency": "SEK",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "266": {
+    "isin": "FI0009007991",
+    "name": "Solteq",
+    "date_of_recommendation": "8.12.2020",
+    "target_price": "3",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "267": {
+    "isin": "FI0009012793",
+    "name": "Soprano",
+    "date_of_recommendation": "15.10.2020",
+    "target_price": "0.26",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "268": {
+    "isin": "FI4000062781",
+    "name": "Caverion",
+    "date_of_recommendation": "6.11.2020",
+    "target_price": "6.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "278": {
+    "isin": "FI0009000665",
+    "name": "Metsä Board",
+    "date_of_recommendation": "28.12.2020",
+    "target_price": "8.25",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "291": {
+    "isin": "FI0009000459",
+    "name": "Huhtamäki",
+    "date_of_recommendation": "23.10.2020",
+    "target_price": "41",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "292": {
+    "isin": "FI0009004741",
+    "name": "Raute",
+    "date_of_recommendation": "30.10.2020",
+    "target_price": "19",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "323": {
+    "isin": "FI4000043435",
+    "name": "Siili Solutions",
+    "date_of_recommendation": "18.12.2020",
+    "target_price": "13",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "327": {
+    "isin": "FI4000369657",
+    "name": "Glaston",
+    "date_of_recommendation": "28.10.2020",
+    "target_price": "0.65",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "336": {
+    "isin": "FI4000415252",
+    "name": "Enedo",
+    "date_of_recommendation": "16.10.2020",
+    "target_price": "1",
+    "currency": "EUR",
+    "recommendation": "1",
+    "risk_level": "4"
+  },
+  "358": {
+    "isin": "FI0009007637",
+    "name": "Innofactor",
+    "date_of_recommendation": "28.10.2020",
+    "target_price": "1.4",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "360": {
+    "isin": "FI0009007264",
+    "name": "Bittium",
+    "date_of_recommendation": "30.11.2020",
+    "target_price": "5.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "385": {
+    "isin": "FI0009008650",
+    "name": "Etteplan",
+    "date_of_recommendation": "18.12.2020",
+    "target_price": "12.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "405": {
+    "isin": "FI0009000681",
+    "name": "Nokia",
+    "date_of_recommendation": "17.12.2020",
+    "target_price": "3.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "418": {
+    "isin": "FI0009000277",
+    "name": "TietoEVRY",
+    "date_of_recommendation": "28.10.2020",
+    "target_price": "30",
+    "currency": "EUR",
+    "recommendation": "5",
+    "risk_level": "2"
+  },
+  "434": {
+    "isin": "FI0009013403",
+    "name": "Kone",
+    "date_of_recommendation": "23.10.2020",
+    "target_price": "60.9963",
+    "currency": "EUR",
+    "recommendation": "1",
+    "risk_level": "1"
+  },
+  "441": {
+    "isin": "FI0009005870",
+    "name": "Konecranes",
+    "date_of_recommendation": "29.10.2020",
+    "target_price": "29",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "462": {
+    "isin": "FI0009014575",
+    "name": "Metso Outotec",
+    "date_of_recommendation": "10.12.2020",
+    "target_price": "8",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "474": {
+    "isin": "FI0009005078",
+    "name": "Ponsse",
+    "date_of_recommendation": "26.11.2020",
+    "target_price": "31",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "479": {
+    "isin": "FI0009003727",
+    "name": "Wärtsilä",
+    "date_of_recommendation": "26.10.2020",
+    "target_price": "8",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "501": {
+    "isin": "FI4000049812",
+    "name": "Verkkokauppa.com",
+    "date_of_recommendation": "21.12.2020",
+    "target_price": "7.5",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "555": {
+    "isin": "FI0009009377",
+    "name": "CapMan",
+    "date_of_recommendation": "29.10.2020",
+    "target_price": "2.1",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "563": {
+    "isin": "FI4000062195",
+    "name": "Taaleri",
+    "date_of_recommendation": "21.12.2020",
+    "target_price": "8.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "574": {
+    "isin": "FI0009000400",
+    "name": "Fiskars Group",
+    "date_of_recommendation": "1.11.2020",
+    "target_price": "14",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "575": {
+    "isin": "FI0009000202",
+    "name": "Kesko",
+    "date_of_recommendation": "3.12.2020",
+    "target_price": "22",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "1"
+  },
+  "576": {
+    "isin": "FI0009005318",
+    "name": "Nokian Renkaat",
+    "date_of_recommendation": "28.10.2020",
+    "target_price": "26",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "577": {
+    "isin": "FI0009007355",
+    "name": "Rapala VMC",
+    "date_of_recommendation": "23.11.2020",
+    "target_price": "4.5",
+    "currency": "EUR",
+    "recommendation": "5",
+    "risk_level": "2"
+  },
+  "578": {
+    "isin": "FI0009003305",
+    "name": "Sampo",
+    "date_of_recommendation": "4.11.2020",
+    "target_price": "38",
+    "currency": "EUR",
+    "recommendation": "5",
+    "risk_level": "1"
+  },
+  "579": {
+    "isin": "FI0009007694",
+    "name": "Sanoma",
+    "date_of_recommendation": "9.12.2020",
+    "target_price": "13",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "784": {
+    "isin": "FI4000349113",
+    "name": "Ovaro Kiinteistösijoitus",
+    "date_of_recommendation": "20.11.2020",
+    "target_price": "4.3",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "4"
+  },
+  "858": {
+    "isin": "FI0009003503",
+    "name": "Apetit",
+    "date_of_recommendation": "5.11.2020",
+    "target_price": "10",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "978": {
+    "isin": "FI4000064332",
+    "name": "NoHo Partners",
+    "date_of_recommendation": "11.11.2020",
+    "target_price": "7.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "4"
+  },
+  "1006": {
+    "isin": "FI0009008387",
+    "name": "Nixu",
+    "date_of_recommendation": "14.10.2020",
+    "target_price": "9.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "1008": {
+    "isin": "FI4000081427",
+    "name": "United Bankers",
+    "date_of_recommendation": "24.10.2020",
+    "target_price": "9",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "1044": {
+    "isin": "FI0009008080",
+    "name": "Aspocomp",
+    "date_of_recommendation": "5.11.2020",
+    "target_price": "3.8",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "1274": {
+    "isin": "FI0009800379",
+    "name": "Panostaja",
+    "date_of_recommendation": "14.12.2020",
+    "target_price": "0.8",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "1438": {
+    "isin": "FI4000029905",
+    "name": "Scanfil",
+    "date_of_recommendation": "15.12.2020",
+    "target_price": "6.3",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "1466": {
+    "isin": "FI4000115464",
+    "name": "Detection Technology",
+    "date_of_recommendation": "28.10.2020",
+    "target_price": "20",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "1476": {
+    "isin": "FI4000153580",
+    "name": "Talenom",
+    "date_of_recommendation": "19.11.2020",
+    "target_price": "12",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "1492": {
+    "isin": "FI0009900385",
+    "name": "Martela",
+    "date_of_recommendation": "9.11.2020",
+    "target_price": "2.5",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "1496": {
+    "isin": "FI0009015309",
+    "name": "SRV",
+    "date_of_recommendation": "16.11.2020",
+    "target_price": "0.58",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "1714": {
+    "isin": "FI0009009617",
+    "name": "eQ",
+    "date_of_recommendation": "9.12.2020",
+    "target_price": "15",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "1"
+  },
+  "1766": {
+    "isin": "FI0009003230",
+    "name": "Finnair",
+    "date_of_recommendation": "12.11.2020",
+    "target_price": "0.48",
+    "currency": "EUR",
+    "recommendation": "1",
+    "risk_level": "4"
+  },
+  "1880": {
+    "isin": "FI4000092556",
+    "name": "Pihlajalinna",
+    "date_of_recommendation": "4.11.2020",
+    "target_price": "10.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "1887": {
+    "isin": "FI0009015580",
+    "name": "Avidly",
+    "date_of_recommendation": "17.11.2020",
+    "target_price": "3.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "4"
+  },
+  "1941": {
+    "isin": "FI4000123070",
+    "name": "Piippo",
+    "date_of_recommendation": "1.12.2020",
+    "target_price": "3",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "2179": {
+    "isin": "FI0009900559",
+    "name": "Investors House",
+    "date_of_recommendation": "1.12.2020",
+    "target_price": "6.3",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "2471": {
+    "isin": "FI0009007660",
+    "name": "Marimekko",
+    "date_of_recommendation": "11.12.2020",
+    "target_price": "47",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "2494": {
+    "isin": "FI0009007728",
+    "name": "Teleste",
+    "date_of_recommendation": "30.10.2020",
+    "target_price": "4.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "2505": {
+    "isin": "FI0009900708",
+    "name": "UTG Mixing Group",
+    "date_of_recommendation": "8.12.2020",
+    "target_price": "0.6",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "2687": {
+    "isin": "SE0001057910",
+    "name": "Sotkamo Silver",
+    "date_of_recommendation": "15.10.2020",
+    "target_price": "3.85",
+    "currency": "SEK",
+    "recommendation": "4",
+    "risk_level": "4"
+  },
+  "2688": {
+    "isin": "FI0009900682",
+    "name": "Vaisala",
+    "date_of_recommendation": "28.10.2020",
+    "target_price": "30",
+    "currency": "EUR",
+    "recommendation": "1",
+    "risk_level": "2"
+  },
+  "2694": {
+    "isin": "FI4000178256",
+    "name": "Consti",
+    "date_of_recommendation": "23.11.2020",
+    "target_price": "10.7",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "2777": {
+    "isin": "FI4000185533",
+    "name": "Vincit",
+    "date_of_recommendation": "30.10.2020",
+    "target_price": "7.5",
+    "currency": "EUR",
+    "recommendation": "5",
+    "risk_level": "2"
+  },
+  "2894": {
+    "isin": "FI4000127527",
+    "name": "Heeros",
+    "date_of_recommendation": "9.12.2020",
+    "target_price": "4.6",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "3302": {
+    "isin": "FI0009013114",
+    "name": "Alma Media",
+    "date_of_recommendation": "22.10.2020",
+    "target_price": "8.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "3359": {
+    "isin": "FI0009800296",
+    "name": "Reka Industrial",
+    "date_of_recommendation": "23.10.2020",
+    "target_price": "2.5",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "4"
+  },
+  "3367": {
+    "isin": "FI0009007306",
+    "name": "Exel Composites",
+    "date_of_recommendation": "8.12.2020",
+    "target_price": "7",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "3368": {
+    "isin": "FI4000048418",
+    "name": "Ahlstrom - Munksjö",
+    "date_of_recommendation": "29.10.2020",
+    "target_price": "17.97",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "3413": {
+    "isin": "FI4000198031",
+    "name": "Qt",
+    "date_of_recommendation": "30.10.2020",
+    "target_price": "45",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "3459": {
+    "isin": "FI4000232913",
+    "name": "Fondia",
+    "date_of_recommendation": "29.10.2020",
+    "target_price": "8",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "4350": {
+    "isin": "FI4000251897",
+    "name": "Remedy",
+    "date_of_recommendation": "10.12.2020",
+    "target_price": "38",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "4510": {
+    "isin": "FI4000233267",
+    "name": "Next Games",
+    "date_of_recommendation": "21.12.2020",
+    "target_price": "1.3",
+    "currency": "EUR",
+    "recommendation": "1",
+    "risk_level": "4"
+  },
+  "4729": {
+    "isin": "SE0008294334",
+    "name": "Endomines",
+    "date_of_recommendation": "2.12.2020",
+    "target_price": "3.2",
+    "currency": "SEK",
+    "recommendation": "1",
+    "risk_level": "4"
+  },
+  "4734": {
+    "isin": "FI0009006407",
+    "name": "Incap",
+    "date_of_recommendation": "26.11.2020",
+    "target_price": "20",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "4735": {
+    "isin": "FI0009900237",
+    "name": "Kesla",
+    "date_of_recommendation": "27.10.2020",
+    "target_price": "4.6",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "4737": {
+    "isin": "FI4000081138",
+    "name": "Lehto Group",
+    "date_of_recommendation": "19.11.2020",
+    "target_price": "1.2",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "4"
+  },
+  "4739": {
+    "isin": "FI0009900187",
+    "name": "Nurminen Logistics",
+    "date_of_recommendation": "10.8.2020",
+    "target_price": "0.25",
+    "currency": "EUR",
+    "recommendation": "1",
+    "risk_level": "4"
+  },
+  "4743": {
+    "isin": "FI0009008452",
+    "name": "Wulff-Yhtiöt",
+    "date_of_recommendation": "20.12.2020",
+    "target_price": "3.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "4744": {
+    "isin": "FI0009900724",
+    "name": "Yleiselektroniikka",
+    "date_of_recommendation": "18.12.2020",
+    "target_price": "29",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "4749": {
+    "isin": "FI0009002943",
+    "name": "Raisio",
+    "date_of_recommendation": "4.11.2020",
+    "target_price": "3.2",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "4753": {
+    "isin": "FI0009800205",
+    "name": "Ilkka-Yhtymä",
+    "date_of_recommendation": "2.11.2020",
+    "target_price": "4",
+    "currency": "EUR",
+    "recommendation": "5",
+    "risk_level": "2"
+  },
+  "4754": {
+    "isin": "FI4000206750",
+    "name": "Kamux",
+    "date_of_recommendation": "14.11.2020",
+    "target_price": "14",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "1"
+  },
+  "4756": {
+    "isin": "FI0009900468",
+    "name": "PunaMusta Media",
+    "date_of_recommendation": "25.10.2020",
+    "target_price": "5.3",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "4760": {
+    "isin": "FI4000058870",
+    "name": "Aktia",
+    "date_of_recommendation": "22.12.2020",
+    "target_price": "10",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "4763": {
+    "isin": "FI0009008924",
+    "name": "Sievi Capital",
+    "date_of_recommendation": "29.10.2020",
+    "target_price": "1.15",
+    "currency": "EUR",
+    "recommendation": "5",
+    "risk_level": "2"
+  },
+  "4765": {
+    "isin": "FI0009007983",
+    "name": "Digia",
+    "date_of_recommendation": "16.12.2020",
+    "target_price": "7.2",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "4769": {
+    "isin": "FI0009008270",
+    "name": "SSH",
+    "date_of_recommendation": "14.12.2020",
+    "target_price": "1",
+    "currency": "EUR",
+    "recommendation": "1",
+    "risk_level": "4"
+  },
+  "4771": {
+    "isin": "FI0009801310",
+    "name": "F-Secure",
+    "date_of_recommendation": "30.10.2020",
+    "target_price": "3.5",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "4772": {
+    "isin": "FI4000170915",
+    "name": "Evli Pankki",
+    "date_of_recommendation": "24.10.2020",
+    "target_price": "11.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "4775": {
+    "isin": "FI4000092523",
+    "name": "Loudspring",
+    "date_of_recommendation": "2.11.2020",
+    "target_price": "0.36",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "4"
+  },
+  "4776": {
+    "isin": "FI4000157441",
+    "name": "EAB Group",
+    "date_of_recommendation": "14.12.2020",
+    "target_price": "2.7",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "7136": {
+    "isin": "FI4000270350",
+    "name": "Titanium",
+    "date_of_recommendation": "23.11.2020",
+    "target_price": "12",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "7248": {
+    "isin": "FI4000252127",
+    "name": "Terveystalo",
+    "date_of_recommendation": "11.12.2020",
+    "target_price": "10.9",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "8674": {
+    "isin": "FI4000283130",
+    "name": "Gofore",
+    "date_of_recommendation": "23.12.2020",
+    "target_price": "14.5",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "9348": {
+    "isin": "FI4000282868",
+    "name": "Efecte",
+    "date_of_recommendation": "3.12.2020",
+    "target_price": "11",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "10660": {
+    "isin": "FI4000251830",
+    "name": "Admicom",
+    "date_of_recommendation": "23.11.2020",
+    "target_price": "120",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "13395": {
+    "isin": "FI4000306873",
+    "name": "Harvia",
+    "date_of_recommendation": "26.11.2020",
+    "target_price": "22",
+    "currency": "EUR",
+    "recommendation": "5",
+    "risk_level": "1"
+  },
+  "13625": {
+    "isin": "FI4000301585",
+    "name": "Enersense",
+    "date_of_recommendation": "21.12.2020",
+    "target_price": "9",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "16923": {
+    "isin": "FI4000322326",
+    "name": "Eezy",
+    "date_of_recommendation": "11.11.2020",
+    "target_price": "5.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "19730": {
+    "isin": "EE3100004466",
+    "name": "Tallink",
+    "date_of_recommendation": "4.12.2020",
+    "target_price": "0.8",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "4"
+  },
+  "25165": {
+    "isin": "FI4000348974",
+    "name": "Fellow Finance",
+    "date_of_recommendation": "9.12.2020",
+    "target_price": "3.2",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "4"
+  },
+  "30833": {
+    "isin": "FI4000349212",
+    "name": "Viafin Service",
+    "date_of_recommendation": "8.12.2020",
+    "target_price": "16.4",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "37917": {
+    "isin": "FI4000348909",
+    "name": "Rush Factory",
+    "date_of_recommendation": "16.11.2020",
+    "target_price": "2",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "4"
+  },
+  "41092": {
+    "isin": "FI4000306733",
+    "name": "Oma Säästöpankki",
+    "date_of_recommendation": "7.12.2020",
+    "target_price": "11",
+    "currency": "EUR",
+    "recommendation": "5",
+    "risk_level": "2"
+  },
+  "46203": {
+    "isin": "SE0010832204",
+    "name": "Cibus Nordic Real Estate",
+    "date_of_recommendation": "11.12.2020",
+    "target_price": "165",
+    "currency": "SEK",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "48520": {
+    "isin": "FI4000364120",
+    "name": "LeadDesk",
+    "date_of_recommendation": "30.11.2020",
+    "target_price": "25.5",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "3"
+  },
+  "62891": {
+    "isin": "FI4000369608",
+    "name": "Aallon Group",
+    "date_of_recommendation": "6.10.2020",
+    "target_price": "11",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "105616": {
+    "isin": "FI4000391487",
+    "name": "Relais Group",
+    "date_of_recommendation": "15.12.2020",
+    "target_price": "13",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "2"
+  },
+  "113732": {
+    "isin": "FI4000400262",
+    "name": "Fodelia",
+    "date_of_recommendation": "28.12.2020",
+    "target_price": "8",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "2"
+  },
+  "129532": {
+    "isin": "FI4000414800",
+    "name": "Bilot",
+    "date_of_recommendation": "21.8.2020",
+    "target_price": "6.9",
+    "currency": "EUR",
+    "recommendation": "2",
+    "risk_level": "3"
+  },
+  "133983": {
+    "isin": "FI4000410758",
+    "name": "Musti Group",
+    "date_of_recommendation": "12.11.2020",
+    "target_price": "21.7",
+    "currency": "EUR",
+    "recommendation": "4",
+    "risk_level": "1"
+  }
+}
