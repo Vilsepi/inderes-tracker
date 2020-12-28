@@ -21,7 +21,7 @@ functions:
     memorySize: 128
     timeout: 20
     events:
-      - schedule: cron(00 6 ? * * *)
+      - schedule: cron(45 7 ? * MON-FRI *) # 9.45am during winter, 10.45am during summer in Finland
 
 package:
   exclude:
