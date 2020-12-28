@@ -1,4 +1,4 @@
-import { getDifferenceBetweenDates } from '../src/inderes/utils';
+import { getDifferenceBetweenDates } from '../../../src/inderes/utils';
 
 describe('getDifferenceBetweenDates', () => {
   test('less than half a day', () => {
