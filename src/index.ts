@@ -10,6 +10,7 @@ export const mainApp = async (): Promise<void> => {
 
   console.log('Fetching analyses...');
   const analyses = await inderesClient.getAnalyses();
+  console.log(JSON.stringify(analyses));
   const now = new Date();
   const freshAnalyses = analyses.filter(analysis => isFreshEnough(analysis, now));
 
@@ -20,7 +21,7 @@ export const mainApp = async (): Promise<void> => {
   await sendMessagesInBatches(telegramClient, messages);
 };
 
-exports.handler = async (event: never) => {
+export const handler = async (event: LambdaEvent): Promise<LambdaResponse> => {
   console.log(JSON.stringify(event));
   await mainApp();
     return {
@@ -28,3 +29,16 @@ exports.handler = async (event: never) => {
       body: "OK"
     };
 };
+
+if (require.main == module) {
+  void handler({source: "local-execution"});
+}
+
+export interface LambdaEvent {
+  source: string
+}
+
+export interface LambdaResponse {
+  statusCode: number,
+  body: string
+}
