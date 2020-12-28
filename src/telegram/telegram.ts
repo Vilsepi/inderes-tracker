@@ -15,6 +15,11 @@ export class TelegramClient {
     });
   }
 
+  public getUpdates = async (): Promise<void> => {
+    const response = (await this.client.post<TelegramResponse>(`/bot${this.authToken}/getUpdates`, {})).data;
+    console.log(JSON.stringify(response));
+  }
+
   public sendMessage = async (text: string): Promise<TelegramResponse> => {
     return (await this.client.post<TelegramResponse>(`/bot${this.authToken}/sendMessage`, {
       chat_id: this.chatId,

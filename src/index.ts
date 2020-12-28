@@ -4,7 +4,7 @@ import { sendMessagesInBatches } from './telegram/batch';
 import { renderMessage } from './telegram/render';
 import { TelegramClient } from './telegram/telegram';
 
-export const mainApp = async (): Promise<void> => {
+export const mainApp = async (dryrun: boolean): Promise<void> => {
   const inderesClient: InderesClient = new InderesClient();
   const telegramClient: TelegramClient = new TelegramClient();
 
@@ -18,12 +18,14 @@ export const mainApp = async (): Promise<void> => {
   for (const analysis of freshAnalyses) {
     messages.push(renderMessage(analysis));
   }
-  await sendMessagesInBatches(telegramClient, messages);
+  await telegramClient.getUpdates();
+  await sendMessagesInBatches(telegramClient, messages, dryrun);
 };
 
 export const handler = async (event: LambdaEvent): Promise<LambdaResponse> => {
   console.log(JSON.stringify(event));
-  await mainApp();
+  const dryrunMessageSending = event.source == 'local-dryrun' ? true : false;
+  await mainApp(dryrunMessageSending);
     return {
       statusCode: 200,
       body: "OK"
@@ -31,7 +33,7 @@ export const handler = async (event: LambdaEvent): Promise<LambdaResponse> => {
 };
 
 if (require.main == module) {
-  void handler({source: "local-execution"});
+  void handler({source: 'local-execution'});
 }
 
 export interface LambdaEvent {
