@@ -25,10 +25,7 @@ functions:
 
 package:
   exclude:
-    - "*.txt"
-    - "*.md"
-    - "*.yml"
-    - "*.json"
-    - "*.xml"
-    - "LICENSE"
-    - "src/*"
+    - "**"
+  include:
+    - "dist/**"
+    - "node_modules/**"
