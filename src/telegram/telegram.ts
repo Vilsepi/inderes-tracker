@@ -1,4 +1,5 @@
-import axios, { AxiosInstance, AxiosResponse } from 'axios';
+import axios, { AxiosInstance } from 'axios';
+import { TelegramResponse } from './telegramTypes';
 
 export class TelegramClient {
   private readonly client: AxiosInstance;
@@ -14,8 +15,8 @@ export class TelegramClient {
     });
   }
 
-  public sendMessage = async (text: string): Promise<any> => {
-    return (await this.client.post<AxiosResponse>(`/bot${this.authToken}/sendMessage`, {
+  public sendMessage = async (text: string): Promise<TelegramResponse> => {
+    return (await this.client.post<TelegramResponse>(`/bot${this.authToken}/sendMessage`, {
       chat_id: this.chatId,
       text: text,
       parse_mode: 'HTML',
