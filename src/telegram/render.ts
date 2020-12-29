@@ -30,9 +30,22 @@ export const renderCurrency = (currency: string): string => {
   }
 }
 
+// Guess company page URL from the company name as it is not provided by the API
+const guessLinkFromName = (name: string): string => {
+  const slug = name
+    .trim()
+    .toLowerCase()
+    .replace(/ /g,'-')
+    .replace(/å/g,'a')
+    .replace(/ä/g,'a')
+    .replace(/ö/g,'o')
+    .replace(/[^\w-]+/g,'')
+  return `https://inderes.fi/fi/yhtiot/${slug}`;
+}
+
 export const renderMessage = (a: EnrichedAnalysis): string => {
   const message =
-    `<b>${renderRecommendation(a.recommendation)} <a href="https://inderes.fi">${a.name}</a></b>\n` +
+    `<b>${renderRecommendation(a.recommendation)} <a href="${guessLinkFromName(a.name)}">${a.name}</a></b>\n` +
     `Tavoitehinta ${a.target_price} ${renderCurrency(a.currency)}\n` +
     `Riski ${a.risk_level}/4: ` +
     `<i>"${a.label}" ${a.date_of_recommendation}</i>` +
