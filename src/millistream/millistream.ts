@@ -17,7 +17,7 @@ export class MillistreamClient {
     });
   }
 
-  // Get primary quote by ISIN
+  // Get price for a stock by given ISIN on the first/primary marketplace found
   public getQuoteByISIN = async (isin: string) : Promise<PriceQuote> => {
     const queryParams = {
       q: `cmd=quote&fields=name,isin,symbol,tradecurrency,marketplace,time,date,lastprice,insref&isin=${isin}`

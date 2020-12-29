@@ -11,6 +11,7 @@ export const isFreshEnough = (analysis: Analysis, now: Date): boolean => {
   return false;
 }
 
+// Returns difference of two dates: the date received from Inderes as dd.mm.yyyy, and given now date
 export const getDifferenceBetweenDates = (date_of_recommendation: string, now: Date): number => {
   const dateParts = date_of_recommendation.split('.');
   const analysisDate = new Date(Number(dateParts[2]), Number(dateParts[1]) - 1, Number(dateParts[0]));
@@ -18,6 +19,7 @@ export const getDifferenceBetweenDates = (date_of_recommendation: string, now: D
   return Math.round(differenceInDays);
 }
 
+// Returns given analysis with added info on latest company report
 export const getAnalysisWithReportInfo = async (client: InderesClient, analysis: Analysis, companyMappings: CompanyMapping[]): Promise<EnrichedAnalysis> => {
   const mapping = companyMappings.find(c => c.isin === analysis.isin);
   if (mapping) {

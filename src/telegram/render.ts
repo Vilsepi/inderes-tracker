@@ -1,6 +1,7 @@
 import { EnrichedAnalysis, Recommendation } from "../inderes/inderesTypes";
 import { PriceQuote } from "../millistream/millistreamTypes";
 
+// Returns localized text for buy/sell recommendation
 export const renderRecommendation = (recommendation: Recommendation): string => {
   if (recommendation == Recommendation.Buy) {
     return "Osta";
@@ -19,6 +20,7 @@ export const renderRecommendation = (recommendation: Recommendation): string => 
   }
 }
 
+// Convert three-letter currency identifiers to known symbols
 export const renderCurrency = (currency: string): string => {
   if (currency == 'EUR') {
     return '€';
@@ -54,6 +56,7 @@ const calculatePotential = (latest: number, target: number): string => {
   return `${potential}%`;
 }
 
+// Returns formatted message string for a given analysis
 export const renderMessage = (a: EnrichedAnalysis, quote: PriceQuote): string => {
   const potential = calculatePotential(quote.lastprice, Number(a.target_price));
   const message =

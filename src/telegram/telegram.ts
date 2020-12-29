@@ -21,6 +21,7 @@ export class TelegramClient {
     console.log(JSON.stringify(response));
   }
 
+  // Send a message with optional HTML formatting to chat ID set by env var.
   public sendMessage = async (text: string): Promise<TelegramResponse> => {
     return (await this.client.post<TelegramResponse>(`/bot${this.authToken}/sendMessage`, {
       chat_id: this.chatId,

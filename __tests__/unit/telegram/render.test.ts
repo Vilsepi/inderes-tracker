@@ -1,7 +1,7 @@
 import { guessLinkFromName } from '../../../src/telegram/render';
 
 describe('guessLinkFromName', () => {
-  test('should return valid URLs', async () => {
+  test('should return correct URLs', async () => {
     expect(guessLinkFromName('Gofore')).toEqual('https://www.inderes.fi/fi/yhtiot/gofore');
     expect(guessLinkFromName('NoHo Partners')).toEqual('https://www.inderes.fi/fi/yhtiot/noho-partners');
     expect(guessLinkFromName('Fiskars Group')).toEqual('https://www.inderes.fi/fi/yhtiot/fiskars-group');
