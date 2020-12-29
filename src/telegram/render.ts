@@ -32,16 +32,17 @@ export const renderCurrency = (currency: string): string => {
 }
 
 // Guess company page URL from the company name as it is not provided by the API
-const guessLinkFromName = (name: string): string => {
+export const guessLinkFromName = (name: string): string => {
   const slug = name
     .trim()
     .toLowerCase()
+    .replace(/ - /g,'-')
     .replace(/ /g,'-')
     .replace(/å/g,'a')
     .replace(/ä/g,'a')
     .replace(/ö/g,'o')
     .replace(/[^\w-]+/g,'')
-  return `https://inderes.fi/fi/yhtiot/${slug}`;
+  return `https://www.inderes.fi/fi/yhtiot/${slug}`;
 }
 
 // Prints percentual difference between latest price and price estimate from analysis
