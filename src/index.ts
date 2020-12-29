@@ -1,5 +1,6 @@
 import { InderesClient } from './inderes/inderes';
 import { getAnalysisWithReportInfo, isFreshEnough } from './inderes/utils';
+import { MillistreamClient } from './millistream/millistream';
 import { sendMessagesInBatches } from './telegram/batch';
 import { renderMessage } from './telegram/render';
 import { TelegramClient } from './telegram/telegram';
@@ -7,6 +8,7 @@ import { TelegramClient } from './telegram/telegram';
 export const mainApp = async (dryrun: boolean): Promise<void> => {
   const inderesClient: InderesClient = new InderesClient();
   const telegramClient: TelegramClient = new TelegramClient();
+  const millistreamClient: MillistreamClient = new MillistreamClient();
 
   console.log('Fetching analyses...');
   const analyses = await inderesClient.getAnalyses();
@@ -19,7 +21,8 @@ export const mainApp = async (dryrun: boolean): Promise<void> => {
 
     const messages: string[] = [];
     for (const analysis of freshAnalyses) {
-      messages.push(renderMessage(await getAnalysisWithReportInfo(inderesClient, analysis, companyMappings)));
+      const quote = await millistreamClient.getQuoteByISIN(analysis.isin);
+      messages.push(renderMessage(await getAnalysisWithReportInfo(inderesClient, analysis, companyMappings), quote));
     }
     await sendMessagesInBatches(telegramClient, messages, dryrun);
   }
@@ -30,10 +33,10 @@ export const handler = async (event: LambdaEvent): Promise<LambdaResponse> => {
   console.log(JSON.stringify(event));
   const dryrunMessageSending = event.source == 'local-dryrun' ? true : false;
   await mainApp(dryrunMessageSending);
-    return {
-      statusCode: 200,
-      body: "OK"
-    };
+  return {
+    statusCode: 200,
+    body: "OK"
+  };
 };
 
 if (require.main == module) {
