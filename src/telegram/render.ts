@@ -44,6 +44,7 @@ const guessLinkFromName = (name: string): string => {
   return `https://inderes.fi/fi/yhtiot/${slug}`;
 }
 
+// Prints percentual difference between latest price and price estimate from analysis
 const calculatePotential = (latest: number, target: number): string => {
   const potential = Math.round((1 - (latest/target)) * 100);
   if (potential > 0) {
@@ -56,7 +57,7 @@ export const renderMessage = (a: EnrichedAnalysis, quote: PriceQuote): string =>
   const potential = calculatePotential(quote.lastprice, Number(a.target_price));
   const message =
     `<b>${renderRecommendation(a.recommendation)} <a href="${guessLinkFromName(a.name)}">${a.name}</a></b>\n` +
-    `${quote.lastprice}${renderCurrency(a.currency)} &#8594; ${a.target_price}${renderCurrency(a.currency)} (${potential})\n` +
+    `<b>${potential}</b> (${quote.lastprice}${renderCurrency(a.currency)} &#8594; ${a.target_price}${renderCurrency(a.currency)})\n` +
     `Riski ${a.risk_level}/4: ` +
     `<i>"${a.label}" ${a.date_of_recommendation}</i>` +
     `\n`;
