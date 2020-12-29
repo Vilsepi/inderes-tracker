@@ -2,6 +2,9 @@ language: node_js
 node_js:
   - lts/*
 
+env:
+  - HUSKY=0 # Skip installing pre-commit hooks in CI
+
 before_script:
   - npm install
 
