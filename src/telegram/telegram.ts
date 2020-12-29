@@ -15,6 +15,7 @@ export class TelegramClient {
     });
   }
 
+  // Get messages that the bot has received. Used manually to discover chat IDs.
   public getUpdates = async (): Promise<void> => {
     const response = (await this.client.post<TelegramResponse>(`/bot${this.authToken}/getUpdates`, {})).data;
     console.log(JSON.stringify(response));

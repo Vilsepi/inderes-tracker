@@ -18,7 +18,6 @@ export const mainApp = async (dryrun: boolean): Promise<void> => {
   for (const analysis of freshAnalyses) {
     messages.push(renderMessage(analysis));
   }
-  await telegramClient.getUpdates();
   await sendMessagesInBatches(telegramClient, messages, dryrun);
 };
 
@@ -33,7 +32,7 @@ export const handler = async (event: LambdaEvent): Promise<LambdaResponse> => {
 };
 
 if (require.main == module) {
-  void handler({source: 'local-execution'});
+  void handler({source: 'local-dryrun'});
 }
 
 export interface LambdaEvent {
