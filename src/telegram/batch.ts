@@ -8,7 +8,6 @@ export const sendMessagesInBatches = async (client: TelegramClient, messages: st
     while (messages.length && (payload.length + messages[0].length) < PAYLOAD_MAX_SIZE) {
       payload += messages.shift() + '\n';
     }
-    payload += 'Inderes.fi';
     try {
       if (!dryrun) {
         console.log('Sending message(s)');

@@ -1,5 +1,5 @@
 import { InderesClient } from './inderes/inderes';
-import { isFreshEnough } from './inderes/utils';
+import { getAnalysisWithReportInfo, isFreshEnough } from './inderes/utils';
 import { sendMessagesInBatches } from './telegram/batch';
 import { renderMessage } from './telegram/render';
 import { TelegramClient } from './telegram/telegram';
@@ -14,11 +14,16 @@ export const mainApp = async (dryrun: boolean): Promise<void> => {
   const now = new Date();
   const freshAnalyses = analyses.filter(analysis => isFreshEnough(analysis, now));
 
-  const messages: string[] = [];
-  for (const analysis of freshAnalyses) {
-    messages.push(renderMessage(analysis));
+  if (freshAnalyses.length) {
+    const companyMappings = await inderesClient.getCompanyMappings();
+
+    const messages: string[] = [];
+    for (const analysis of freshAnalyses) {
+      messages.push(renderMessage(await getAnalysisWithReportInfo(inderesClient, analysis, companyMappings)));
+    }
+    await sendMessagesInBatches(telegramClient, messages, dryrun);
   }
-  await sendMessagesInBatches(telegramClient, messages, dryrun);
+
 };
 
 export const handler = async (event: LambdaEvent): Promise<LambdaResponse> => {

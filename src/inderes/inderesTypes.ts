@@ -28,3 +28,20 @@ export enum Risk {
   Lower = '2',
   Lowest = '1'
 }
+
+export interface EnrichedAnalysis extends Analysis, CompanyReport {
+}
+
+export interface CompanyReport {
+  label: string,
+  published: string,
+  url: string
+}
+
+export interface CompanyMapping {
+  id: string,
+  title: string,
+  isin: string,
+  tid: string,
+  standby: boolean
+}

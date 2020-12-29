@@ -1,4 +1,4 @@
-import { Analysis, Recommendation } from "../inderes/inderesTypes";
+import { EnrichedAnalysis, Recommendation } from "../inderes/inderesTypes";
 
 export const renderRecommendation = (recommendation: Recommendation): string => {
   if (recommendation == Recommendation.Buy) {
@@ -30,7 +30,12 @@ export const renderCurrency = (currency: string): string => {
   }
 }
 
-export const renderMessage = (a: Analysis): string => {
-  const message = `<b>${renderRecommendation(a.recommendation)} ${a.name}</b>\nTavoitehinta ${a.target_price} ${renderCurrency(a.currency)}\nRiski ${a.risk_level}/4\n<i>${a.date_of_recommendation}</i>\n`;
+export const renderMessage = (a: EnrichedAnalysis): string => {
+  const message =
+    `<b>${renderRecommendation(a.recommendation)} <a href="https://inderes.fi">${a.name}</a></b>\n` +
+    `Tavoitehinta ${a.target_price} ${renderCurrency(a.currency)}\n` +
+    `Riski ${a.risk_level}/4: ` +
+    `<i>"${a.label}" ${a.date_of_recommendation}</i>` +
+    `\n`;
   return message;
 }

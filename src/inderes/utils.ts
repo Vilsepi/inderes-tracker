@@ -1,4 +1,5 @@
-import { Analysis } from "./inderesTypes";
+import { InderesClient } from "./inderes";
+import { Analysis, CompanyMapping, EnrichedAnalysis } from "./inderesTypes";
 
 const MAX_AGE_OF_ANALYSIS_IN_DAYS = 4; // 4 is needed to cover analysis from Friday to market day on Monday
 
@@ -15,4 +16,14 @@ export const getDifferenceBetweenDates = (date_of_recommendation: string, now: D
   const analysisDate = new Date(Number(dateParts[2]), Number(dateParts[1]) - 1, Number(dateParts[0]));
   const differenceInDays = Math.abs((now.getTime() - analysisDate.getTime()) / 1000 / 3600 / 24);
   return Math.round(differenceInDays);
+}
+
+export const getAnalysisWithReportInfo = async (client: InderesClient, analysis: Analysis, companyMappings: CompanyMapping[]): Promise<EnrichedAnalysis> => {
+  const mapping = companyMappings.find(c => c.isin === analysis.isin);
+  if (mapping) {
+    const companyReport = await client.getLatestCompanyReport(mapping.tid);
+    const enrichedAnalysis: EnrichedAnalysis = {...analysis, ...companyReport};
+    return enrichedAnalysis;
+  }
+  throw `Could not find ${analysis.name} from mapping`;
 }
