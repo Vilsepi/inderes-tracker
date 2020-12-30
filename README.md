@@ -3,7 +3,9 @@
 
 [![Build Status](https://travis-ci.com/Vilsepi/inderes-tracker.svg?branch=main)](https://travis-ci.com/Vilsepi/inderes-tracker)
 
-Tracks stock analysis from [Inderes.fi](https://www.inderes.fi).
+Tracks stock analysis from [Inderes.fi](https://www.inderes.fi). Sends daily notifications of latest analysis to Telegram.
+
+![Screenshot](screenshot.jpg)
 
 ## Getting started
 
