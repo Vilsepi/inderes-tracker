@@ -1,5 +1,5 @@
 service: inderes-tracker
-frameworkVersion: ">=2.16.1 <3.0.0"
+frameworkVersion: ">=2.17.0 <3.0.0"
 
 custom:
   credentialsProfile: heap
