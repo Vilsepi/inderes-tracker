@@ -48,8 +48,8 @@ export const guessLinkFromName = (name: string): string => {
 }
 
 // Prints percentual difference between latest price and price estimate from analysis
-const calculatePotential = (latest: number, target: number): string => {
-  const potential = Math.round((1 - (latest/target)) * 100);
+export const calculatePotential = (latest: number, target: number): string => {
+  const potential = Math.round(100 * (target - latest) / latest);
   if (potential > 0) {
     return `+${potential}%`;
   }
