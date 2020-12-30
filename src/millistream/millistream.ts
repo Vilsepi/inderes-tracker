@@ -2,7 +2,7 @@ import axios, { AxiosInstance } from 'axios';
 import { PriceQuote } from './millistreamTypes';
 
 const EXPECTED_MARKETPLACES = [
-  35235, // Finland
+  35235, // Nasdaq Helsinki
   35182, // First North Finland
   35181  // First North GM Sweden
 ];
