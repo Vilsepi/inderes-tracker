@@ -1,4 +1,5 @@
-import { calculatePotential, guessLinkFromName } from '../../../src/telegram/render';
+import { Recommendation, Risk } from '../../../src/inderes/inderesTypes';
+import { calculatePotential, guessLinkFromName, renderMessage } from '../../../src/telegram/render';
 
 describe('guessLinkFromName', () => {
   test('should return correct URLs', async () => {
@@ -29,5 +30,58 @@ describe('calculatePotential', () => {
     expect(calculatePotential(15.76, 13.00)).toEqual('-18%');
     expect(calculatePotential(3.20, 3.20)).toEqual('0%');
     expect(calculatePotential(45.16, 45.00)).toEqual('0%');
+  });
+});
+
+describe('renderMessage', () => {
+  const enrichedAnalysis = {
+    isin: 'FI0009800296',
+    name: 'Reka Industrial',
+    date_of_recommendation: '23.10.2020',
+    target_price: '2.5',
+    currency: 'EUR',
+    recommendation: Recommendation.Reduce,
+    risk_level: Risk.Highest,
+    label: "Heikommin menee",
+    published: "123",
+    url: "https://localhost"
+  };
+
+  test('should render potential when last price is known', async () => {
+    const priceQuote = {
+      name: "Reka Industrial",
+      isin: "FI0009800296",
+      symbol: "ABC",
+      tradecurrency: "EUR",
+      marketplace: 3,
+      time: "123",
+      date: "123",
+      lastprice: 3.5,
+      insref: 1234
+    }
+    const expectedMessage = "<b>Vähennä <a href=\"https://www.inderes.fi/fi/yhtiot/reka-industrial\">Reka Industrial</a></b>\n" +
+     "<b>-29%</b> (3.5€ &#8594; 2.5€)\n" +
+     "Riski 4/4: <i>\"Heikommin menee\" 23.10.2020</i>\n";
+    expect(renderMessage(enrichedAnalysis, priceQuote)).toEqual(expectedMessage);
+  });
+
+  test('should only render target price when last price is unknown', async () => {
+    const priceQuote = {
+      name: "Reka Industrial",
+      isin: "FI0009800296",
+      symbol: "ABC",
+      tradecurrency: "EUR",
+      marketplace: 3,
+      time: "123",
+      date: "123",
+      insref: 1234
+    }
+    const expectedMessage = "<b>Vähennä <a href=\"https://www.inderes.fi/fi/yhtiot/reka-industrial\">Reka Industrial</a></b>\n" +
+     "Tavoitehinta 2.5€\n" +
+     "Riski 4/4: <i>\"Heikommin menee\" 23.10.2020</i>\n";
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    expect(renderMessage(enrichedAnalysis, priceQuote)).toEqual(expectedMessage);
   });
 });

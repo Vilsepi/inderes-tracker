@@ -58,10 +58,18 @@ export const calculatePotential = (latest: number, target: number): string => {
 
 // Returns formatted message string for a given analysis
 export const renderMessage = (a: EnrichedAnalysis, quote: PriceQuote): string => {
-  const potential = calculatePotential(quote.lastprice, Number(a.target_price));
+  let priceRow = "";
+  if (quote.lastprice) {
+    const potential = calculatePotential(quote.lastprice, Number(a.target_price));
+    priceRow = `<b>${potential}</b> (${quote.lastprice}${renderCurrency(a.currency)} &#8594; ${a.target_price}${renderCurrency(a.currency)})\n`
+  }
+  else {
+    priceRow = `Tavoitehinta ${a.target_price}${renderCurrency(a.currency)}\n`
+  }
+
   const message =
     `<b>${renderRecommendation(a.recommendation)} <a href="${guessLinkFromName(a.name)}">${a.name}</a></b>\n` +
-    `<b>${potential}</b> (${quote.lastprice}${renderCurrency(a.currency)} &#8594; ${a.target_price}${renderCurrency(a.currency)})\n` +
+    priceRow +
     `Riski ${a.risk_level}/4: ` +
     `<i>"${a.label}" ${a.date_of_recommendation}</i>` +
     `\n`;
