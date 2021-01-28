@@ -29,3 +29,23 @@ export const getAnalysisWithReportInfo = async (client: InderesClient, analysis:
   }
   throw `Could not find ${analysis.name} from mapping`;
 }
+
+// Guess company page slug from the company name as it is not provided by the API
+export const guessSlugFromName = (name: string): string => {
+  const slug = name
+    .trim()
+    .toLowerCase()
+    .replace(/ - /g,'-')
+    .replace(/ /g,'-')
+    .replace(/å/g,'a')
+    .replace(/ä/g,'a')
+    .replace(/ö/g,'o')
+    .replace(/[^\w-]+/g,'');
+  return slug;
+}
+
+// Guess company page URL from the company name as it is not provided by the API
+export const guessLinkFromName = (name: string): string => {
+  const slug = guessSlugFromName(name);
+  return `https://www.inderes.fi/fi/yhtiot/${slug}`;
+}

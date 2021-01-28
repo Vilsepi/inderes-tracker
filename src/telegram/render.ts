@@ -1,5 +1,6 @@
-import { EnrichedAnalysis, Recommendation } from "../inderes/inderesTypes";
-import { PriceQuote } from "../millistream/millistreamTypes";
+import { EnrichedAnalysis, InderesPriceQuote, Recommendation } from "../inderes/inderesTypes";
+import { guessLinkFromName } from "../inderes/utils";
+// import { PriceQuote } from "../millistream/millistreamTypes";
 
 // Returns localized text for buy/sell recommendation
 export const renderRecommendation = (recommendation: Recommendation): string => {
@@ -36,20 +37,6 @@ export const renderCurrency = (currency: string): string => {
   }
 }
 
-// Guess company page URL from the company name as it is not provided by the API
-export const guessLinkFromName = (name: string): string => {
-  const slug = name
-    .trim()
-    .toLowerCase()
-    .replace(/ - /g,'-')
-    .replace(/ /g,'-')
-    .replace(/å/g,'a')
-    .replace(/ä/g,'a')
-    .replace(/ö/g,'o')
-    .replace(/[^\w-]+/g,'')
-  return `https://www.inderes.fi/fi/yhtiot/${slug}`;
-}
-
 // Prints percentual difference between latest price and price estimate from analysis
 export const calculatePotential = (latest: number, target: number): string => {
   const potential = Math.round(100 * (target - latest) / latest);
@@ -60,11 +47,12 @@ export const calculatePotential = (latest: number, target: number): string => {
 }
 
 // Returns formatted message string for a given analysis
-export const renderMessage = (a: EnrichedAnalysis, quote: PriceQuote): string => {
+export const renderMessage = (a: EnrichedAnalysis, quote: InderesPriceQuote): string => {
   let priceRow = "";
-  if (quote.lastprice) {
-    const potential = calculatePotential(quote.lastprice, Number(a.target_price));
-    priceRow = `<b>${potential}</b> (${quote.lastprice}${renderCurrency(a.currency)} &#8594; ${a.target_price}${renderCurrency(a.currency)})\n`
+  const lastprice = Number(quote.lastprice);
+  if (lastprice) {
+    const potential = calculatePotential(lastprice, Number(a.target_price));
+    priceRow = `<b>${potential}</b> (${lastprice}${renderCurrency(a.currency)} &#8594; ${a.target_price}${renderCurrency(a.currency)})\n`
   }
   else {
     priceRow = `Tavoitehinta ${a.target_price}${renderCurrency(a.currency)}\n`
