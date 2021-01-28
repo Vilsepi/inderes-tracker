@@ -13,10 +13,11 @@ export interface Analysis {
   risk_level: Risk
 }
 
-// Higher value indicates stronger buy signal. Value 3 is not in use.
+// Higher value indicates stronger buy signal. Value 3 is very rarely in use.
 export enum Recommendation {
   Buy = '5',
   Accumulate = '4',
+  Hold = '3',
   Reduce = '2',
   Sell = '1'
 }

@@ -9,6 +9,9 @@ export const renderRecommendation = (recommendation: Recommendation): string => 
   else if (recommendation == Recommendation.Accumulate) {
     return "Lisää";
   }
+  else if (recommendation == Recommendation.Hold) {
+    return "Pidä";
+  }
   else if (recommendation == Recommendation.Reduce) {
     return "Vähennä";
   }
