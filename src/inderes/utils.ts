@@ -1,7 +1,7 @@
 import { InderesClient } from "./inderes";
 import { Analysis, CompanyMapping, EnrichedAnalysis } from "./inderesTypes";
 
-const MAX_AGE_OF_ANALYSIS_IN_DAYS = 4; // 4 is needed to cover analysis from Friday to market day on Monday
+const MAX_AGE_OF_ANALYSIS_IN_DAYS = 2; // 4 is needed to cover analysis from Friday to market day on Monday
 
 // Returns true if given analysis is considered new enough to be noteworthy.
 export const isFreshEnough = (analysis: Analysis, now: Date): boolean => {

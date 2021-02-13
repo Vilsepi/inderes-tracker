@@ -35,12 +35,12 @@ describe('getDifferenceBetweenDates', () => {
 });
 
 describe('isFreshEnough', () => {
-  test('data from friday is fresh enough on monday', () => {
-    const now = new Date('2020-12-28T07:00:00');
+  test('data is fresh enough', () => {
+    const now = new Date('2021-02-13T07:00:00');
     const analysis: Analysis = {
       isin: 'FI0009010912',
       name: 'Revenio Group',
-      date_of_recommendation: '25.12.2020',
+      date_of_recommendation: '12.02.2021',
       target_price: '44',
       currency: 'EUR',
       recommendation: Recommendation.Reduce,
@@ -49,12 +49,12 @@ describe('isFreshEnough', () => {
     expect(isFreshEnough(analysis, now)).toEqual(true);
   });
 
-  test('not fresh enough on tuesday', () => {
-    const now = new Date('2020-12-29T04:00:00');
+  test('not fresh enough', () => {
+    const now = new Date('2021-02-13T07:00:00');
     const analysis: Analysis = {
       isin: 'FI0009010912',
       name: 'Revenio Group',
-      date_of_recommendation: '25.12.2020',
+      date_of_recommendation: '11.02.2021',
       target_price: '44',
       currency: 'EUR',
       recommendation: Recommendation.Reduce,
