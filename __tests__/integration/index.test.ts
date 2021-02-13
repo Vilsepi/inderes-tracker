@@ -17,4 +17,11 @@ describe('Inderes.fi', () => {
     }
   });
 
+  test('should return last price for given company', async () => {
+    const quote = await client.getPriceFromWebpage('gofore');
+    expect(quote).toHaveProperty('lastprice');
+    expect(Number(quote.lastprice)).toBeGreaterThanOrEqual(1);
+    expect(quote).toHaveProperty('tradecurrency');
+  });
+
 });
