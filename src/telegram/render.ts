@@ -46,13 +46,19 @@ export const calculatePotential = (latest: number, target: number): string => {
   return `${potential}%`;
 }
 
-// Returns formatted message string for a given analysis
-export const renderMessage = (a: EnrichedAnalysis, quote: InderesPriceQuote): string => {
+// Returns formatted message string for a given analysis. If latest market price is given, calculates potential
+export const renderMessage = (a: EnrichedAnalysis, quote: InderesPriceQuote|null): string => {
   let priceRow = "";
-  const lastprice = Number(quote.lastprice);
-  if (lastprice) {
-    const potential = calculatePotential(lastprice, Number(a.target_price));
-    priceRow = `<b>${potential}</b> (${lastprice}${renderCurrency(a.currency)} &#8594; ${a.target_price}${renderCurrency(a.currency)})\n`
+  if (quote?.lastprice && Number(quote.lastprice)) {
+    const lastprice = Number(quote.lastprice);
+    if (quote.tradecurrency == a.currency) {
+      const potential = calculatePotential(lastprice, Number(a.target_price));
+      priceRow = `<b>${potential}</b> (${lastprice}${renderCurrency(quote.tradecurrency)} &#8594; ${a.target_price}${renderCurrency(a.currency)})\n`
+    }
+    else {
+      console.log(`Currency mismatch: ${JSON.stringify(a)} ${JSON.stringify(quote)}`);
+      priceRow = `${lastprice}${renderCurrency(quote.tradecurrency)} &#8594; ${a.target_price}${renderCurrency(a.currency)}\n`
+    }
   }
   else {
     priceRow = `Tavoitehinta ${a.target_price}${renderCurrency(a.currency)}\n`

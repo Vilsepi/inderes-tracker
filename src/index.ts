@@ -10,7 +10,6 @@ export const mainApp = async (dryrun: boolean): Promise<void> => {
 
   console.log('Fetching analyses...');
   const analyses = await inderesClient.getAnalyses();
-  console.log(JSON.stringify(analyses));
   const now = new Date();
   const freshAnalyses = analyses.filter(analysis => isFreshEnough(analysis, now));
 
@@ -19,7 +18,12 @@ export const mainApp = async (dryrun: boolean): Promise<void> => {
 
     const messages: string[] = [];
     for (const analysis of freshAnalyses) {
-      const quote = await inderesClient.getPriceFromWebpage(guessSlugFromName(analysis.name));
+      let quote = null;
+      try {
+        quote = await inderesClient.getPriceFromWebpage(guessSlugFromName(analysis.name));
+      } catch (error) {
+        console.warn(`Failed to get latest price for stock ${analysis.name}`);
+      }
       messages.push(renderMessage(await getAnalysisWithReportInfo(inderesClient, analysis, companyMappings), quote));
     }
     await sendMessagesInBatches(telegramClient, messages, dryrun);

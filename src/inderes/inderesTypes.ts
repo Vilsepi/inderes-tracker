@@ -48,22 +48,22 @@ export interface CompanyMapping {
 }
 
 export interface InderesPriceQuote {
-  isin: string,
+  lastprice: string,
+  tradecurrency: string
+  /*isin: string,
   marketplace: string,
   insref: string,
   symbol: string,
   name: string,
-  tradecurrency: string,
   diff1d: string,
   diff1dprc: string,
   bidprice: string,
   askprice: string,
-  lastprice: string,
   dayhighprice: string,
   daylowprice: string,
   closeprice1d: string,
   turnover: string,
   quantity: string,
   timestamp: string,
-  no_last_price: boolean
+  no_last_price: boolean*/
 }

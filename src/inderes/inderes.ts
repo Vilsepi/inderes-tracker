@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-import { Analysis, Analyses, CompanyReport, CompanyMapping } from './inderesTypes';
+import { Analysis, Analyses, CompanyReport, CompanyMapping, InderesPriceQuote } from './inderesTypes';
 
 export class InderesClient {
   private readonly client: AxiosInstance;
@@ -28,16 +28,16 @@ export class InderesClient {
   }
 
   // Return price data from website
-  public getPriceFromWebpage = async (company_slug: string) : Promise<any> => {
+  public getPriceFromWebpage = async (company_slug: string) : Promise<InderesPriceQuote> => {
     const html = (await this.client.get<string>(`/yhtiot/${company_slug}`)).data;
     const regex = /"millistream_live":({[^}]*})/;
     const match = html.match(regex);
     if (match) {
       const price_data = JSON.parse(match[1]);
-      console.log(price_data);
       return price_data;
     }
-    return {};
+    console.error(html);
+    throw "Could not find price from inderes web page";
   }
 
 }
