@@ -65,10 +65,9 @@ export const renderMessage = (a: EnrichedAnalysis, quote: InderesPriceQuote|null
   }
 
   const message =
-    `<b>${renderRecommendation(a.recommendation)} <a href="${guessLinkFromName(a.name)}">${a.name}</a></b>\n` +
+    `<b>${renderRecommendation(a.recommendation)} <a href="${guessLinkFromName(a.name)}">${a.name}</a></b>, riski ${a.risk_level}/4\n` +
     priceRow +
-    `Riski ${a.risk_level}/4: ` +
-    `<i>"${a.label}" ${a.date_of_recommendation}</i>` +
+    `<i>"${a.label}"</i>` +
     `\n`;
   return message;
 }

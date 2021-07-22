@@ -35,9 +35,9 @@ describe('renderMessage', () => {
       lastprice: '3.5',
       tradecurrency: 'EUR'
     }
-    const expectedMessage = "<b>Vähennä <a href=\"https://www.inderes.fi/fi/yhtiot/reka-industrial\">Reka Industrial</a></b>\n" +
+    const expectedMessage = "<b>Vähennä <a href=\"https://www.inderes.fi/fi/yhtiot/reka-industrial\">Reka Industrial</a></b>, riski 4/4\n" +
      "<b>-29%</b> (3.5€ &#8594; 2.5€)\n" +
-     "Riski 4/4: <i>\"Heikommin menee\" 23.10.2020</i>\n";
+     "<i>\"Heikommin menee\"</i>\n";
     expect(renderMessage(enrichedAnalysis, priceQuote)).toEqual(expectedMessage);
   });
 
@@ -46,9 +46,9 @@ describe('renderMessage', () => {
       lastprice: '35',
       tradecurrency: 'SEK'
     }
-    const expectedMessage = "<b>Vähennä <a href=\"https://www.inderes.fi/fi/yhtiot/reka-industrial\">Reka Industrial</a></b>\n" +
+    const expectedMessage = "<b>Vähennä <a href=\"https://www.inderes.fi/fi/yhtiot/reka-industrial\">Reka Industrial</a></b>, riski 4/4\n" +
      "35SEK &#8594; 2.5€\n" +
-     "Riski 4/4: <i>\"Heikommin menee\" 23.10.2020</i>\n";
+     "<i>\"Heikommin menee\"</i>\n";
     expect(renderMessage(enrichedAnalysis, priceQuote)).toEqual(expectedMessage);
   });
 
@@ -57,9 +57,9 @@ describe('renderMessage', () => {
       name: "Reka Industrial",
       isin: "FI0009800296"
     }
-    const expectedMessage = "<b>Vähennä <a href=\"https://www.inderes.fi/fi/yhtiot/reka-industrial\">Reka Industrial</a></b>\n" +
+    const expectedMessage = "<b>Vähennä <a href=\"https://www.inderes.fi/fi/yhtiot/reka-industrial\">Reka Industrial</a></b>, riski 4/4\n" +
      "Tavoitehinta 2.5€\n" +
-     "Riski 4/4: <i>\"Heikommin menee\" 23.10.2020</i>\n";
+     "<i>\"Heikommin menee\"</i>\n";
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
