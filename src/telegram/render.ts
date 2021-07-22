@@ -1,5 +1,6 @@
 import { EnrichedAnalysis, InderesPriceQuote, Recommendation } from "../inderes/inderesTypes";
 import { guessLinkFromName } from "../inderes/utils";
+import { SortableMessage } from "./telegramTypes";
 // import { PriceQuote } from "../millistream/millistreamTypes";
 
 // Returns localized text for buy/sell recommendation
@@ -37,9 +38,13 @@ export const renderCurrency = (currency: string): string => {
   }
 }
 
-// Prints percentual difference between latest price and price estimate from analysis
-export const calculatePotential = (latest: number, target: number): string => {
-  const potential = Math.round(100 * (target - latest) / latest);
+// Calculates percentual difference between latest price and price estimate from analysis
+export const calculatePotential = (latest: number, target: number): number => {
+  return Math.round(100 * (target - latest) / latest);
+}
+
+// Prints percentual difference with explicit sign
+export const renderPotential = (potential: number): string => {
   if (potential > 0) {
     return `+${potential}%`;
   }
@@ -47,14 +52,16 @@ export const calculatePotential = (latest: number, target: number): string => {
 }
 
 // Returns formatted message string for a given analysis. If latest market price is given, calculates potential
-export const renderMessage = (a: EnrichedAnalysis, quote: InderesPriceQuote|null): string => {
+export const renderMessage = (a: EnrichedAnalysis, quote: InderesPriceQuote|null): SortableMessage => {
   let priceRow = "";
+  let sortOrder = -1000;
   const targetprice_rounded = +Number(a.target_price).toFixed(1);
   if (quote?.lastprice && Number(quote.lastprice)) {
     const lastprice_rounded = +Number(quote.lastprice).toFixed(1);
     if (quote.tradecurrency == a.currency) {
       const potential = calculatePotential(Number(quote.lastprice), Number(a.target_price));
-      priceRow = `<b>${potential}</b> (${lastprice_rounded}${renderCurrency(quote.tradecurrency)} &#8594; ${targetprice_rounded}${renderCurrency(a.currency)})\n`
+      sortOrder = potential;
+      priceRow = `<b>${renderPotential(potential)}</b> (${lastprice_rounded}${renderCurrency(quote.tradecurrency)} &#8594; ${targetprice_rounded}${renderCurrency(a.currency)})\n`
     }
     else {
       console.log(`Currency mismatch: ${JSON.stringify(a)} ${JSON.stringify(quote)}`);
@@ -70,5 +77,16 @@ export const renderMessage = (a: EnrichedAnalysis, quote: InderesPriceQuote|null
     priceRow +
     `<i>"${a.label}"</i>` +
     `\n`;
-  return message;
+  return {message: message, sortOrder: sortOrder};
+}
+
+// Compares sort orders of SortableMessages
+export const comparePotentials = (a: SortableMessage, b: SortableMessage): number => {
+  if (a.sortOrder > b.sortOrder) {
+    return -1;
+  }
+  else if (a.sortOrder < b.sortOrder) {
+    return 1;
+  }
+  return 0;
 }

@@ -1,18 +1,18 @@
 import { Recommendation, Risk } from '../../../src/inderes/inderesTypes';
-import { calculatePotential, renderMessage } from '../../../src/telegram/render';
+import { calculatePotential, renderMessage, renderPotential } from '../../../src/telegram/render';
 
 describe('calculatePotential', () => {
   test('should calculate correctly', async () => {
-    expect(calculatePotential(100, 200)).toEqual('+100%');
-    expect(calculatePotential(20, 80)).toEqual('+300%');
-    expect(calculatePotential(10, 13)).toEqual('+30%');
-    expect(calculatePotential(8, 4)).toEqual('-50%');
-    expect(calculatePotential(1.66, 1)).toEqual('-40%');
-    expect(calculatePotential(2.13, 1.30)).toEqual('-39%');
-    expect(calculatePotential(0.89, 0.65)).toEqual('-27%');
-    expect(calculatePotential(15.76, 13.00)).toEqual('-18%');
-    expect(calculatePotential(3.20, 3.20)).toEqual('0%');
-    expect(calculatePotential(45.16, 45.00)).toEqual('0%');
+    expect(renderPotential(calculatePotential(100, 200))).toEqual('+100%');
+    expect(renderPotential(calculatePotential(20, 80))).toEqual('+300%');
+    expect(renderPotential(calculatePotential(10, 13))).toEqual('+30%');
+    expect(renderPotential(calculatePotential(8, 4))).toEqual('-50%');
+    expect(renderPotential(calculatePotential(1.66, 1))).toEqual('-40%');
+    expect(renderPotential(calculatePotential(2.13, 1.30))).toEqual('-39%');
+    expect(renderPotential(calculatePotential(0.89, 0.65))).toEqual('-27%');
+    expect(renderPotential(calculatePotential(15.76, 13.00))).toEqual('-18%');
+    expect(renderPotential(calculatePotential(3.20, 3.20))).toEqual('0%');
+    expect(renderPotential(calculatePotential(45.16, 45.00))).toEqual('0%');
   });
 });
 
@@ -38,7 +38,7 @@ describe('renderMessage', () => {
     const expectedMessage = "<b>Vähennä <a href=\"https://www.inderes.fi/fi/yhtiot/reka-industrial\">Reka Industrial</a></b>, riski 4/4\n" +
      "<b>-30%</b> (3.5€ &#8594; 2.5€)\n" +
      "<i>\"Heikommin menee\"</i>\n";
-    expect(renderMessage(enrichedAnalysis, priceQuote)).toEqual(expectedMessage);
+    expect(renderMessage(enrichedAnalysis, priceQuote).message).toEqual(expectedMessage);
   });
 
   test('should not calculate potential if currencies mismatch', async () => {
@@ -49,7 +49,7 @@ describe('renderMessage', () => {
     const expectedMessage = "<b>Vähennä <a href=\"https://www.inderes.fi/fi/yhtiot/reka-industrial\">Reka Industrial</a></b>, riski 4/4\n" +
      "35SEK &#8594; 2.5€\n" +
      "<i>\"Heikommin menee\"</i>\n";
-    expect(renderMessage(enrichedAnalysis, priceQuote)).toEqual(expectedMessage);
+    expect(renderMessage(enrichedAnalysis, priceQuote).message).toEqual(expectedMessage);
   });
 
   test('should only render target price when last price is unknown', async () => {
@@ -63,6 +63,6 @@ describe('renderMessage', () => {
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    expect(renderMessage(enrichedAnalysis, priceQuote)).toEqual(expectedMessage);
+    expect(renderMessage(enrichedAnalysis, priceQuote).message).toEqual(expectedMessage);
   });
 });

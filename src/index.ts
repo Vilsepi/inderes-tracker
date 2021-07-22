@@ -1,8 +1,9 @@
 import { InderesClient } from './inderes/inderes';
 import { getAnalysisWithReportInfo, guessSlugFromName, isFreshEnough } from './inderes/utils';
 import { sendMessagesInBatches } from './telegram/batch';
-import { renderMessage } from './telegram/render';
+import { comparePotentials, renderMessage } from './telegram/render';
 import { TelegramClient } from './telegram/telegram';
+import { SortableMessage } from './telegram/telegramTypes';
 
 export const mainApp = async (dryrun: boolean): Promise<void> => {
   const inderesClient: InderesClient = new InderesClient();
@@ -16,7 +17,7 @@ export const mainApp = async (dryrun: boolean): Promise<void> => {
   if (freshAnalyses.length) {
     const companyMappings = await inderesClient.getCompanyMappings();
 
-    const messages: string[] = [];
+    const messages: SortableMessage[] = [];
     for (const analysis of freshAnalyses) {
       let quote = null;
       try {
@@ -26,6 +27,7 @@ export const mainApp = async (dryrun: boolean): Promise<void> => {
       }
       messages.push(renderMessage(await getAnalysisWithReportInfo(inderesClient, analysis, companyMappings), quote));
     }
+    messages.sort(comparePotentials);
     await sendMessagesInBatches(telegramClient, messages, dryrun);
   }
 
