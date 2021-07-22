@@ -10,10 +10,16 @@ describe('Inderes.fi', () => {
         expect(analysis).toHaveProperty('isin');
         expect(analysis).toHaveProperty('name');
         expect(analysis).toHaveProperty('date_of_recommendation');
-        expect(analysis).toHaveProperty('target_price');
-        expect(analysis).toHaveProperty('currency');
-        expect(analysis).toHaveProperty('recommendation');
-        expect(analysis).toHaveProperty('risk_level');
+        if (analysis.name != 'Arvo Sijoitusosuuskunta') {
+          // eslint-disable-next-line jest/no-conditional-expect
+          expect(analysis).toHaveProperty('target_price');
+          // eslint-disable-next-line jest/no-conditional-expect
+          expect(analysis).toHaveProperty('currency');
+          // eslint-disable-next-line jest/no-conditional-expect
+          expect(analysis).toHaveProperty('recommendation');
+          // eslint-disable-next-line jest/no-conditional-expect
+          expect(analysis).toHaveProperty('risk_level');
+        }
     }
   });
 

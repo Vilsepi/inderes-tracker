@@ -13,6 +13,7 @@ module.exports = {
   testMatch: [
     '**/*.test.ts'
   ],
+  testTimeout: 10000,
   transform: {
     '^.+\\.tsx?$': 'ts-jest'
   }
