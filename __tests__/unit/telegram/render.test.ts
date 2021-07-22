@@ -32,11 +32,11 @@ describe('renderMessage', () => {
 
   test('should render potential when last price is known', async () => {
     const priceQuote = {
-      lastprice: '3.5',
+      lastprice: '3.548',
       tradecurrency: 'EUR'
     }
     const expectedMessage = "<b>Vähennä <a href=\"https://www.inderes.fi/fi/yhtiot/reka-industrial\">Reka Industrial</a></b>, riski 4/4\n" +
-     "<b>-29%</b> (3.5€ &#8594; 2.5€)\n" +
+     "<b>-30%</b> (3.5€ &#8594; 2.5€)\n" +
      "<i>\"Heikommin menee\"</i>\n";
     expect(renderMessage(enrichedAnalysis, priceQuote)).toEqual(expectedMessage);
   });

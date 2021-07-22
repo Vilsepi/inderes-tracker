@@ -49,19 +49,20 @@ export const calculatePotential = (latest: number, target: number): string => {
 // Returns formatted message string for a given analysis. If latest market price is given, calculates potential
 export const renderMessage = (a: EnrichedAnalysis, quote: InderesPriceQuote|null): string => {
   let priceRow = "";
+  const targetprice_rounded = +Number(a.target_price).toFixed(1);
   if (quote?.lastprice && Number(quote.lastprice)) {
-    const lastprice = Number(quote.lastprice);
+    const lastprice_rounded = +Number(quote.lastprice).toFixed(1);
     if (quote.tradecurrency == a.currency) {
-      const potential = calculatePotential(lastprice, Number(a.target_price));
-      priceRow = `<b>${potential}</b> (${lastprice}${renderCurrency(quote.tradecurrency)} &#8594; ${a.target_price}${renderCurrency(a.currency)})\n`
+      const potential = calculatePotential(Number(quote.lastprice), Number(a.target_price));
+      priceRow = `<b>${potential}</b> (${lastprice_rounded}${renderCurrency(quote.tradecurrency)} &#8594; ${targetprice_rounded}${renderCurrency(a.currency)})\n`
     }
     else {
       console.log(`Currency mismatch: ${JSON.stringify(a)} ${JSON.stringify(quote)}`);
-      priceRow = `${lastprice}${renderCurrency(quote.tradecurrency)} &#8594; ${a.target_price}${renderCurrency(a.currency)}\n`
+      priceRow = `${lastprice_rounded}${renderCurrency(quote.tradecurrency)} &#8594; ${targetprice_rounded}${renderCurrency(a.currency)}\n`
     }
   }
   else {
-    priceRow = `Tavoitehinta ${a.target_price}${renderCurrency(a.currency)}\n`
+    priceRow = `Tavoitehinta ${targetprice_rounded}${renderCurrency(a.currency)}\n`
   }
 
   const message =
