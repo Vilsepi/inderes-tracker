@@ -1,5 +1,5 @@
 service: inderes-tracker
-frameworkVersion: ">=2.17.0 <3.0.0"
+frameworkVersion: ">=2.52.0 <3.0.0"
 
 custom:
   credentialsProfile: heap
@@ -19,7 +19,7 @@ functions:
   trackAnalysis:
     handler: dist/index.handler
     memorySize: 128
-    timeout: 20
+    timeout: 60
     events:
       - schedule: cron(55 6 ? * * *) # 8.55am during winter, 9.55am during summer in Finland
 
