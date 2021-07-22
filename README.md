@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.com/Vilsepi/inderes-tracker.svg?branch=main)](https://travis-ci.com/Vilsepi/inderes-tracker)
 
-Tracks stock analysis from [Inderes.fi](https://www.inderes.fi). Sends daily notifications of latest analysis to Telegram.
+Tracks stock analysis from [Inderes.fi](https://www.inderes.fi). Sends daily notifications of changes in stock recommendations to Telegram.
 
 ![Screenshot](screenshot.jpg)
 
@@ -38,6 +38,5 @@ This source code is provided as is. This code nor its authors do not provide fin
 
 This program uses:
 
-- [**inderes.fi**](https://www.inderes.fi/fi) to fetch stock analysis
-- [**millistream.com**](https://millistream.com/) to fetch latest stock prices
+- [**inderes.fi**](https://www.inderes.fi/fi) to fetch stock analysis and prices
 - [**telegram.org**](https://telegram.org/) to send push notifications
