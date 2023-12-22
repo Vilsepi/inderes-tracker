@@ -1,5 +1,5 @@
 service: inderes-tracker
-frameworkVersion: ">=3.21.0 <4.0.0"
+frameworkVersion: ">=3.38.0 <4.0.0"
 
 custom:
   credentialsProfile: heap
@@ -8,7 +8,7 @@ custom:
 
 provider:
   name: aws
-  runtime: nodejs16.x
+  runtime: nodejs20.x
   region: ${self:custom.region}
   profile: ${self:custom.credentialsProfile}
   environment:
