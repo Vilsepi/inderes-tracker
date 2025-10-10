@@ -43,8 +43,17 @@ export interface CompanyMapping {
   id: string,
   title: string,
   isin: string,
+  companyInsref: string,
   tid: string,
   standby: boolean
+}
+
+export interface CompanyChartDetails {
+  type: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  params: any,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  props: any
 }
 
 export interface InderesPriceQuote {
